@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>youtube</title>
+    <script src="https://kit.fontawesome.com/e3e7530894.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link th:href="@{https://fonts.googleapis.com/icon?family=Material+Icons}"
+          rel="stylesheet">
+    <script src="/js/index.js" defer></script>
+</head>
+
+<body>
+<!-- header -->
+<header>
+
+    <nav class="header-navbar">
+        <div class="navbar__hamburger-logo" href="">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            <img class="navbar__logo" src="/images/logo.png" alt="">
+        </div>
+        <div class="navbar__search">
+            <input type="text" placeholder="   검색">
+            <i class="material-icons">search</i>
+        </div>
+        <ul class="navbar__icons">
+            <li class="videoplus">
+                <span class="material-icons">video_call</span>
+            </li>
+            <li class="alarm">
+                <span class="material-icons">notifications</span>
+            </li>
+            <li class="user">
+                <span class="material-icons">account_circle</span>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="all">
+
+    <div class="left">
+        <!-- Video Player -->
+        <section class="player">
+            <video controls src="/video/flat-video.mp4"></video>
+        </section>
+
+        <!-- Video Info -->
+        <section class="info">
+            <!-- Metadata -->
+            <div class="metadata">
+                <ul class="hashtags">
+                    <li>#납작만두</li>
+                    <li>#세계여행</li>
+                    <li>#만두</li>
+                </ul>
+                <div class="titleAndButton">
+          <span class="title clamp">
+            세계 납작만두
+          <button class="moreBtn">
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+        </span>
+                </div>
+                <div class="views">1M views 1 month ago</div>
+            </div>
+            <!-- Channel Description -->
+            <div class="channel">
+                <div class="metadata">
+                    <img class="me" src="/images/flat.png" alt="">
+                    <div class="info">
+                        <span class="name">채널이름</span>
+                        <span class="subscribers">2K subscribers</span>
+                    </div>
+                    <button class="subscribe">subscribe</button>
+                </div>
+
+                <!-- Actions -->
+                <ul class="actions">
+                    <li><button><i class="active fa-solid fa-thumbs-up fa-2x"></i><span>1K</span></button></li>
+                    <li><button><i class="fa-solid fa-share fa-2x"></i><span>Share</span></button></li>
+                    <li><button><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i><span>Save</span></button></li>
+                    <li><button><i class="fa-solid fa-flag fa-2x"></i><span>import</span></button></li>
+                </ul>
+            </div>
+
+
+
+            <div class="comment">
+                댓글이 사용 중지되었습니다. <a href="#"> 자세히 알아보기</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="right">
+        <span class="title">Up next</span>
+        <ul>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">Flexbox Froggy 문제풀이</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">3.2K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">[코드엔진] Basic RCE L14 풀이</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">1.7K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">[코드엔진] Basic RCE L10 풀이</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">2.4K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">[자료구조 with Python] 선형리스트의 원리, 구현</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">1.4K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">[이것이 코딩테스트다] 숫자 카드 게임</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">2.9K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">어셈블리어로 Hello World 출력하기</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">3.5K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">[코드엔진] Basic RCE L10 풀이</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">2.4K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">스택프레임 이해하기</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">1K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">Flexbox Froggy 문제풀이</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">3.2K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">[코드엔진] Basic RCE L14 풀이</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">1.7K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">[코드엔진] Basic RCE L10 풀이</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">2.4K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">[자료구조 with Python] 선형리스트의 원리, 구현</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">1.4K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">[이것이 코딩테스트다] 숫자 카드 게임</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">2.9K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">어셈블리어로 Hello World 출력하기</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">3.5K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">[코드엔진] Basic RCE L10 풀이</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">2.4K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">스택프레임 이해하기</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">1K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">Flexbox Froggy 문제풀이</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">3.2K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">[코드엔진] Basic RCE L14 풀이</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">1.7K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">[코드엔진] Basic RCE L10 풀이</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">2.4K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">[자료구조 with Python] 선형리스트의 원리, 구현</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">1.4K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">[이것이 코딩테스트다] 숫자 카드 게임</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">2.9K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">어셈블리어로 Hello World 출력하기</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">3.5K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">[코드엔진] Basic RCE L10 풀이</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">2.4K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="img"><img src="/images/flat.png" alt=""></div>
+                <div class="info">
+                    <span class="title">스택프레임 이해하기</span>
+                    <span class="name">코딩 by test</span>
+                    <span class="views">1K views</span>
+                </div>
+                <div>
+                    <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

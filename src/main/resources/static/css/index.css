@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&family=Gowun+Batang:wght@700&family=Martel:wght@300&family=Nanum+Myeongjo:wght@700&family=Nanum+Pen+Script&family=Open+Sans&family=Roboto&family=Source+Sans+Pro:wght@300&display=swap');
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  /* color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #1359c7;
+  --red-color: #e30504;
+  --grey-dark-color: #616161;
+  --gray-light-color: #8e8e8e;
+
+  /* size */
+  --padding:12px;
+  --avatar-size: 36px;
+
+  /* font size */
+  --font-superlarge: 22px;
+  --font-verylarge: 20px;
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+.all {
+  padding-top: 20px;
+  justify-content: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+  padding: 15px 30px;
+}
+
+ul {
+  list-style: none;
+}
+
+.header-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.navbar__hamburger-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
+}
+.navbar__hamburger-logo i {
+  font-size: 20px;
+}
+
+.navbar__logo {
+  width: 120px;
+}
+
+.navbar__search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-grow: 2;
+}
+.navbar__search input {
+  width: 30vw;
+  height: 35px;
+  border-radius: 30px;
+  border: 1px solid #c8c8c8;
+  padding-left: 19px;
+}
+.navbar__search i {
+  font-size: 30px;
+  color: #696969;
+}
+
+.navbar__icons {
+  justify-content: flex-end;
+  display: flex;
+  gap: 10px;
+  flex-grow: 1;
+}
+.navbar__icons > li > span {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+
+header .icons .fa-search {
+  margin-right: var(--padding);
+}
+
+.logo .title {
+  font-size: 20px;
+}
+
+.logo .sup {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color)
+}
+
+/* Video Player */
+.player {
+  margin-left: 10px;
+  /*position: sticky;
+  top: 0;*/
+  text-align: center;
+  /*background-color: var(--black-color);*/
+}
+
+.player video {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  /*max-width:800px;*/
+}
+
+.left .info {
+  margin: 10px;
+  margin-top: 20px;
+}
+
+body > .info {
+  padding: var(--padding);
+}
+
+.info .metadata {
+  margin: 10px;
+}
+
+.info .metadata .hashtags {
+  display: flex;
+  font-size: var(--font-small);
+  color: var(--blue-color);
+}
+
+.info .metadata .hashtags li {
+  margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .title {
+  font-size: var(--font-large);
+  margin-right: var(--padding);
+  margin-left: 0;
+
+}
+
+.info .metadata .titleAndButton .title.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.info .metadata .titleAndButton .comment {
+  text-align: center;
+  text-decoration: none;
+}
+
+button, button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: white;
+}
+
+.info .metadata .titleAndButton .moreBtn {
+  height: 100%;
+  transition: transform 300ms ease-in-out;
+}
+
+.info .metadata .titleAndButton .moreBtn.clicked {
+  transform: rotate(180deg);
+}
+
+
+.info .views {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.info .actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.info .actions button {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-small);
+  color: var(--gray-light-color);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.info .actions button i {
+  margin: 0 auto;
+  margin-bottom: calc(var(--padding)/2);
+  font-size: 16px;
+}
+
+.info .actions button i.active {
+  color: var(--blue-color);
+}
+
+.info .channel {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--grey-dark-color);
+  border-bottom: 1px solid var(--grey-dark-color);
+}
+
+.info .channel .metadata {
+  display: flex;
+  align-items: center;
+}
+
+.info .channel .metadata .info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.info .channel .metadata .me {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  margin-right: var(--padding);
+  border-radius: 50%;
+  margin-top: var(--padding);
+  margin-bottom: var(--padding);
+}
+
+.info .channel .metadata .info .name {
+  font-size: var(--font-medium);
+}
+
+.info .channel .metadata .info .subscribers {
+  color: var(--grey-dark-color);
+  font-size: var(--font-small);
+}
+
+.info .channel .subscribe {
+  text-transform: uppercase;
+  color: var(--white-color);
+  font-size: var(--font-medium);
+  background: var(--red-color);
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.comment {
+  text-align: center;
+  margin: 50px;
+}
+
+.comment a{
+  text-decoration: none;
+}
+.right {
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  color: var(--black-color);
+
+}
+
+.right .title {
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+  margin-left: 25px;
+  margin-bottom: calc(var(--padding) / 2);
+}
+
+.right .item {
+  display: flex;
+  color: var(--black-color);
+  margin-top: var(--padding);
+  margin-left: calc(var(--padding)*2);
+
+}
+
+.right .item .img {
+  flex: 1 1 25%;
+  margin-right: var(--padding);
+
+}
+
+.right .item .info {
+  flex: 70%;
+
+}
+
+.right .item .info .title {
+  margin-left:0;
+}
+
+.right .item .img img {
+  width: 180px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+
+
+.right .item .moreBtn {
+  flex: 1 1 5%;
+  margin-left: 5px;
+}
+
+.right .item .info {
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.right .item .info .name,
+.right .item .info .views {
+  margin-left: 25px;
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+  margin-left: 0;
+}
+
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  .all {
+    display: flex;
+    flex-direction: row;
+    margin: var(--padding) 0;
+    margin: calc(3*(var(--padding)));
+    margin-top:0;
+
+  }
+
+}
