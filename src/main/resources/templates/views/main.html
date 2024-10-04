@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css}">
-    <script src="https://kit.fontawesome.com/847d54d8db.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/bff9dc88d9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" th:href="@{/css/main.css}">
     <!-- 아이콘 -->
     <link th:href="@{https://fonts.googleapis.com/icon?family=Material+Icons}"
           rel="stylesheet">
     <link th:href="@{https://fonts.googleapis.com/css2?family=Roboto&display=swap}" rel="stylesheet">
+    <script src="/js/header.js" defer></script>
     <title>youtube</title>
 </head>
 <body>
 <header>
     <nav class="header-navbar">
         <div class="navbar__hamburger-logo" href="">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars navbarBtn"></i>
             <img class="navbar__logo" src="/images/logo.png" alt="">
         </div>
         <div class="navbar__search">
@@ -38,7 +39,7 @@
     </nav>
 </header>
 <div class="container">
-    <aside>
+    <aside class="aside">
         <div class="sidemenu-container">
             <ul class="sidemenu-item sidemenu__main">
                 <li>
