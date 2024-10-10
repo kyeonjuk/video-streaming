@@ -1,123 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css}">
-    <script src="https://kit.fontawesome.com/bff9dc88d9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" th:href="@{/css/main.css}">
-    <!-- 아이콘 -->
-    <link th:href="@{https://fonts.googleapis.com/icon?family=Material+Icons}"
-          rel="stylesheet">
-    <link th:href="@{https://fonts.googleapis.com/css2?family=Roboto&display=swap}" rel="stylesheet">
-    <script src="/js/header.js" defer></script>
-    <title>youtube</title>
 </head>
 <body>
-<header>
-    <nav class="header-navbar">
-        <div class="navbar__hamburger-logo" href="">
-            <i class="fa-solid fa-bars navbarBtn"></i>
-            <img class="navbar__logo" src="/images/logo.png" alt="">
-        </div>
-        <div class="navbar__search">
-            <input type="text" placeholder="   검색">
-            <i class="material-icons">search</i>
-        </div>
-        <ul class="navbar__icons">
-            <li class="videoplus">
-                <span class="material-icons">video_call</span>
-            </li>
-            <li class="alarm">
-                <span class="material-icons">notifications</span>
-            </li>
-            <li class="user">
-                <span class="material-icons">account_circle</span>
-            </li>
-        </ul>
-    </nav>
-</header>
+<!-- header -->
+<div th:insert="~{../common/header :: headerFragment}"></div>
+<!-- // header -->
+
 <div class="container">
-    <aside class="aside">
-        <div class="sidemenu-container">
-            <ul class="sidemenu-item sidemenu__main">
-                <li>
-                    <span class="material-icons">home</span>
-                    <p>홈</p>
-                </li>
-                <li>
-                    <span class="material-icons">ondemand_video</span>
-                    <p>Shorts</p>
-                </li>
-                <li>
-                    <span class="material-icons">video_library</span>
-                    <p>구독</p>
-                </li>
-                <li>
-                    <span class="material-icons">smart_display</span>
-                    <p>Originals</p>
-                </li>
-                <li>
-                    <span class="material-icons">headphones</span>
-                    <p>YouTube Music</p>
-                </li>
-            </ul>
-            <hr>
-            <ul class="sidemenu-item sidemenu__user">
-                <li>
-                    <span class="material-icons">subscriptions</span>
-                    <p>보관함</p>
-                </li>
-                <li>
-                    <span class="material-icons">history</span>
-                    <p>시청 기록</p>
-                </li>
-                <li>
-                    <span class="material-icons">live_tv</span>
-                    <p>내 동영상</p>
-                </li>
-                <li>
-                    <span class="material-icons">schedule</span>
-                    <p>나중에 볼 동영상</p>
-                </li>
-                <li>
-                    <span class="material-icons">download</span>
-                    <p>오프라인 저장 동영상</p>
-                </li>
-            </ul>
-            <hr>
-            <ul class="sidemenu-item sidemenu__subscribe">
-                <h1>구독</h1>
-                <li>
-                    <img src="/images/flat.png" alt="">
-                    <p>납작만두</p>
-                </li>
-                <li>
-                    <img src="/images/flat.png" alt="">
-                    <p>피식대학Psick Univ</p>
-                </li>
-                <li>
-                    <img src="/images/flat.png" alt="">
-                    <p>드림코딩</p>
-                </li>
-                <li>
-                    <img src="/images/flat.png" alt="">
-                    <p>돌비공포라디오</p>
-                </li>
-                <li>
-                    <img src="/images/flat.png" alt="">
-                    <p>기묘한 밤</p>
-                </li>
-            </ul>
-            <hr>
-            <footer>
-                <p>© 2024 Google LLC</p>
-                <p>© 2024 Google LLC</p>
-            </footer>
-        </div>
-    </aside>
-    <main>
+
+    <main class="main">
         <nav class="navbar">
             <li><a href="#">전체</a></li>
             <li><a href="#">음악</a></li>
