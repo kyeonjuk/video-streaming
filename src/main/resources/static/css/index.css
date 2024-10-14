@@ -4,7 +4,7 @@
   --black-color: #140a00;
   --blue-color: #1359c7;
   --red-color: #e30504;
-  --grey-dark-color: #616161;
+  --gray-dark-color: #616161;
   --gray-light-color: #8e8e8e;
 
   /* size */
@@ -80,11 +80,17 @@ body > .info {
 
 }
 
-.info .metadata .titleAndButton .title.clamp {
+.info .metadata .titleAndButton .title .clamp {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+}
+
+.info .metadata .titleAndButton {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  max-width: 1200px;
 }
 
 .info .metadata .titleAndButton .comment {
@@ -111,7 +117,7 @@ button, button:focus {
 
 .info .views {
   font-size: var(--font-small);
-  color: var(--grey-dark-color);
+  color: var(--gray-dark-color);
 }
 
 .info .actions {
@@ -137,15 +143,19 @@ button, button:focus {
   font-size: 16px;
 }
 
-.info .actions button i.active {
+.info .actions i.fa-thumbs-up.active {
   color: var(--blue-color);
+}
+
+.info .actions button i.fa-flag.active {
+  color: var(--red-color);
 }
 
 .info .channel {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid var(--grey-dark-color);
-  border-bottom: 1px solid var(--grey-dark-color);
+  border-top: 1px solid var(--gray-dark-color);
+  border-bottom: 1px solid var(--gray-dark-color);
 }
 
 .info .channel .metadata {
@@ -170,14 +180,15 @@ button, button:focus {
 
 .info .channel .metadata .info .name {
   font-size: var(--font-medium);
+  margin-bottom: 7px;
 }
 
 .info .channel .metadata .info .subscribers {
-  color: var(--grey-dark-color);
+  color: var(--gray-dark-color);
   font-size: var(--font-small);
 }
 
-.info .channel .subscribe {
+.info .channel .metadata .subscribe {
   text-transform: uppercase;
   color: var(--white-color);
   font-size: var(--font-medium);
@@ -185,6 +196,16 @@ button, button:focus {
   padding: 10px;
   border-radius: 30px;
 }
+
+.info .channel .metadata .subscribe:hover {
+  cursor: pointer;
+}
+
+.info .channel .metadata .subscribe.clicked {
+  background-color: #e3e3e3;
+  color: #8d8d8d;
+}
+
 
 .comment {
   text-align: center;
@@ -204,7 +225,7 @@ button, button:focus {
 
 .right .title {
   font-size: var(--font-medium);
-  color: var(--grey-dark-color);
+  color: var(--gray-dark-color);
   margin-left: 25px;
   margin-bottom: calc(var(--padding) / 2);
 }
@@ -257,7 +278,7 @@ button, button:focus {
 .right .item .info .views {
   margin-left: 25px;
   font-size: var(--font-small);
-  color: var(--grey-dark-color);
+  color: var(--gray-dark-color);
   margin-left: 0;
 }
 

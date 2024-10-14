@@ -9,8 +9,6 @@ sideContainer.style.width = "185px";
 mainSize.style.marginLeft = "224px";
 
 navbarBtn.addEventListener('click', () => {
-    console.log('Button clicked');
-    console.log(getComputedStyle(sideContainer).width);
     sideContainer.style.width = (sideContainer.style.width === "185px") ? "42px" : "185px";
     // 각 p 태그에 대해 display 속성 변경
     sidePTags.forEach(p => {
