@@ -154,8 +154,6 @@ button, button:focus {
 .info .channel {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid var(--gray-dark-color);
-  border-bottom: 1px solid var(--gray-dark-color);
 }
 
 .info .channel .metadata {
@@ -305,5 +303,235 @@ button, button:focus {
   .sidemenu-container {
       width: 42px;
   }
+}
 
+/* 댓글 css */
+.Comment_box {
+    width: 100%;
+}
+.Comment_sort_box {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.Comment_sort_box div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.Comment_sort {
+    color: black !important;
+    font-size: 14px !important;
+}
+.Comment_number {
+    font-size: 18px !important;
+    color: black !important;
+    font-weight: 600;
+}
+.Comment_input_part {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    /* background-color: aquamarine; */
+}
+.Comment_input_part img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+.Comment_input_box {
+    width: 100%;
+    /* background-color: #787878; */
+}
+.Comment_input_box div {
+    width: 160px;
+    height: 36px;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 21px;
+}
+.Comment_input_box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: #666;
+    vertical-align: middle;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.Comment_input_box input:focus {
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+
+@keyframes inputAnimation {
+    from {
+        box-sizing: inherit;
+        border-bottom: 1px solid #000;
+        transform: scale3d(0, 1, 0);
+    }
+    to {
+        box-sizing: inherit;
+        border-bottom: 2px solid #000;
+        transform: scale3d(1, 1, 1);
+    }
+}
+.Comment_line {
+    position: absolute;
+    top: 138%;
+    height: 1px;
+    width: 63%;
+    background-color: lightgrey;
+    transition: 0.3s;
+}
+.Comment_line_inAni {
+    position: absolute;
+    top: 138%;
+    height: 2px;
+    width: 63%;
+    background-color: black;
+    animation-name: inputAnimation;
+    animation-duration: 0.3s;
+}
+.Comment_buttons {
+    width: 72px;
+    height: 37px;
+    line-height: 37px;
+    margin: 7px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    color: #909090;
+    font-size: 13px;
+}
+#Comment_btn1 {
+    background-color: rgb(246, 246, 246);
+    color: #787878;
+}
+#Comment_btn2 {
+    background-color: rgb(225, 225, 225);
+}
+#Comment_btn2_active {
+    background-color: rgb(19, 51, 255);
+    color: white;
+    cursor: pointer;
+}
+.Comments_list {
+    width: 100%;
+    height: auto;
+}
+
+.Comment_box {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.Comment_menu {
+    position: absolute;;
+    right: 480px;
+}
+.Comment_box:nth-child(1) {
+    margin-top: 10px;
+}
+.Comment_box img {
+    vertical-align: top;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.Comment_box > div > p {
+    font-size: 13px;
+    margin-top: 5px;
+}
+.Comment_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 25px;
+}
+.Comment_info span {
+    font-size: 10px;
+    color: grey;
+}
+.Comment_info p {
+    font-size: 13px;
+    margin-right: 5px;
+}
+.Comment_good_bad {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.Comment_good_bad span {
+    margin: 0 10px;
+    color: black;
+}
+
+.Comment_content {
+    display: inline-block;
+}
+.Comment {
+    margin-top: 30px;
+}
+
+/* comment_input_box */
+#Comment_btn2.active {
+    background-color: #4f7dff; /* 활성화된 색상 */
+    cursor: pointer; /* 활성화된 커서 */
+    color: white;
+}
+
+/* 댓글 리스트 css */
+.content_name {
+    font-weight: 600;
+
+}
+
+.content_date {
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+.content_text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* 댓글 like, unlike 아이콘 */
+.comment_thumb_up {
+    font-size: 20px!important;
+    color: #5f6368!important;
+}
+
+.comment_thumb_down {
+    margin-left: 10px;
+    font-size: 20px!important;
+    color: #5f6368!important;
+}
+
+.comment_thumb_up:hover {
+    cursor: pointer;
+}
+
+.comment_thumb_down:hover {
+    cursor: pointer;
 }

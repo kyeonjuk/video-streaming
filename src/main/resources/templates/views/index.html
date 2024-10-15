@@ -36,7 +36,7 @@
                     <div class="titleAndButton">
                             <span class="title">
                                 <span class="title-name clamp">
-                                세계 납작만두 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목
+                                    세계 납작만두 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목
                                 </span>
                                 <button class="moreBtn">
                                     <i class="fa-solid fa-caret-down"></i>
@@ -66,10 +66,89 @@
                 </div>
 
 
+                    <!-- 댓글 -->
 
-                <div class="comment">
-                    댓글이 사용 중지되었습니다. <a href="#"> 자세히 알아보기</a>
-                </div>
+                    <div class="Comment_box">
+                        <div class="Comment_sort_box">
+                            <span class="Comment_number">댓글 3개</span>
+                            <!--<span class="Comment_number" th:text="'댓글 ' + ${commentsSample.size()} + '개'">댓글 0개</span> -->
+                            <div>
+                                <i class="material-icons">sort</i>
+                                <span class="Comment_sort">정렬 기준</span>
+                            </div>
+                        </div>
+                        <div class="Comment_input_part">
+                            <img src="https://yt3.ggpht.com/ytc/AMLnZu9Jzp859A5IesAX3WqVFY0ocYhG3_oFkYuLlNlH1KPJhA=s88-c-k-c0x00ffffff-no-rj-mo" alt="User Image"/>
+                            <div class="Comment_input_box">
+                                <input
+                                        type="text"
+                                        placeholder="댓글 추가...">
+                                        <!--th:value="${inputComment}"-->
+
+                                <div>
+                                    <div id="Comment_btn1" class="Comment_buttons">취소</div>
+                                    <div id="Comment_btn2" class="Comment_buttons">작성</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Comments_list">
+                            <!-- 댓글 반복
+                            <div th:each="comment : ${commentsSample}" class="Comment">
+                                <img th:src="${comment.imgSrc}" alt="User Image"/>
+                                <div class="Comment_content">
+                                    <span class="content_name" th:text="${comment.userName}"></span>
+                                    <span class="content_date" th:text="${comment.date}"></span>
+                                    <p class="content_text" th:text="${comment.comment}"></p>
+                                    <i class="material-icons comment_thumb_up">thumb_up</i>
+                                    <span class="content_like" th:text="${comment.like}"></span>
+                                    <i class="material-icons comment_thumb_down">thumb_down</i>
+                                    <span class="content_like" th:text="${comment.unlike}"></span>
+                                </div>
+                            </div> -->
+                            <div class="Comments_list">
+                                <div class="Comment">
+                                    <img src="https://yt3.ggpht.com/ytc/AMLnZu_D4JwoqK3mF9YcK1b6_sQ8lvdQ-luwDuqt3w=s88-c-k-c0x00ffffff-no-rj" alt="User Image"/>
+                                    <div class="Comment_content">
+                                        <span class="content_name">테스트</span>
+                                        <span class="content_date">2022/05/05</span>
+                                        <p class="content_text">좋아요!!</p>
+                                        <i class="material-icons comment_thumb_up">thumb_up_off_alt</i>
+                                        <span class="content_like">5</span>
+                                        <i class="material-icons comment_thumb_down">thumb_down_off_alt</i>
+                                        <span class="content_unlike">5</span>
+                                    </div>
+                                </div>
+                                <div class="Comment">
+                                    <img src="https://lh3.googleusercontent.com/ogw/AOh-ky1uAXwkV8yiFs8KaB07AxluQj2nYO0d-RgdXzqr=s64-c-mo" alt="User Image"/>
+                                    <div class="Comment_content">
+                                        <span class="content_name">성원진</span>
+                                        <span class="content_date">2022/05/05</span>
+                                        <p class="content_text">좋아요!!</p>
+                                        <i class="material-icons comment_thumb_up">thumb_up_off_alt</i>
+                                        <span class="content_like">5</span>
+                                        <i class="material-icons comment_thumb_down">thumb_down_off_alt</i>
+                                        <span class="content_unlike">5</span>
+                                    </div>
+                                </div>
+                                <div class="Comment">
+                                    <img src="https://yt3.ggpht.com/ytc/AMLnZu9kCKCBTyW3NUg0qiakoo_NPijLpMRjHyWyeUhO1-FAXAjbtINI76YzJSfQZ5JZCGnqUxU=s88-c-k-c0x00ffffff-no-rj" alt="User Image"/>
+                                    <div class="Comment_content">
+                                        <span class="content_name">원진성</span>
+                                        <span class="content_date">2022/05/05</span>
+                                        <p class="content_text">좋아요!!</p>
+                                        <i class="material-icons comment_thumb_up">thumb_up_off_alt</i>
+                                        <span class="content_like">5</span>
+                                        <i class="material-icons comment_thumb_down">thumb_down_off_alt</i>
+                                        <span class="content_unlike">5</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- // 댓글 -->
+
             </section>
         </div>
 
