@@ -1,0 +1,69 @@
+.main {
+    width: 100%; /* 부모 요소의 너비 설정 */
+    display: flex; /* Flexbox를 사용하여 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+}
+
+.subscriptions-bar {
+    background-color: #ff5555;
+    color: white;
+    padding: 20px;
+    width: 50%; /* 너비를 70%로 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+    text-align: center;
+    border-radius: 14px;
+}
+
+.subscriptions {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.subscription-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.subscription-list li {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.subscription-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.subscription-list img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    margin-right: 15px;
+    border-radius: 50%; /* 원형으로 만들기 */
+}
+
+.channel-info h2 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #333;
+}
+
+.channel-info p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+.sub-main {
+    width: 100%!important; /* 너비 설정 */
+    margin: 20px auto!important; /* 중앙 정렬 */
+}
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="headerFragment">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" th:href="@{/css/mySubscriptions.css}">
+  <script src="/js/mySubscriptions.js" defer></script>
+</head>
+<body>
+<!-- 공통 header -->
+<div th:insert="~{../common/header :: headerFragment}"></div>
+<div class="container">
+  <main class="main">
+    <div class="sub-main">
+      <div class="subscriptions-bar">
+        <h1>내 구독 목록</h1>
+      </div>
+
+      <div class="subscriptions">
+        <!-- 구독 리스트 받아오기 -->
+        <!--<ul class="subscription-list">
+          <li th:each="channel : ${channels}" th:data-href="@{${channel.url}}">
+            <img th:src="${channel.image}" alt="${channel.name}">
+            <div class="channel-info">
+              <h2 th:text="${channel.name}">채널 이름</h2>
+              <p th:text="'구독자: ' + ${channel.subscriberCount} + '명'">구독자 수</p>
+            </div>
+          </li>
+        </ul>-->
+        <ul class="subscription-list">
+          <li data-href="/channel1">
+            <img src="/images/flat.png" alt="채널 1">
+            <div class="channel-info">
+              <h2>채널 1</h2>
+              <p>구독자: 1,000명</p>
+            </div>
+          </li>
+          <li data-href="/channel2">
+            <img src="/images/flat.png" alt="채널 2">
+            <div class="channel-info">
+              <h2>채널 2</h2>
+              <p>구독자: 2,500명</p>
+            </div>
+          </li>
+          <li data-href="/channel3">
+            <img src="/images/flat.png" alt="채널 3">
+            <div class="channel-info">
+              <h2>채널 3</h2>
+              <p>구독자: 5,000명</p>
+            </div>
+          </li>
+          <li data-href="/channel4">
+            <img src="/images/flat.png" alt="채널 4">
+            <div class="channel-info">
+              <h2>채널 4</h2>
+              <p>구독자: 3,000명</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

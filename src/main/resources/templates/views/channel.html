@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" th:href="@{/css/channel.css}">
+  <script src="/js/channel.js" defer></script>
+</head>
+<body>
+<!-- header -->
+<div th:insert="~{../common/header :: headerFragment}"></div>
+<!-- // header -->
+
+<div class="container">
+  <main class="main">
+    <div class="channel-container">
+      <header class="channel-header">
+        <div class="banner">
+          <img src="/images/flat.png" alt="채널 배너" class="banner-image">
+        </div>
+        <div class="profile">
+          <img src="/images/flat.png" alt="프로필 이미지" class="profile-image">
+          <h1 class="channel-title">채널 이름</h1>
+          <p class="subscriber-count">구독자: 1,234명</p>
+        </div>
+      </header>
+
+      <div class="video-gallery">
+        <h2>최신 동영상</h2>
+        <div class="sort-options">
+          <label for="sort-select">정렬 기준:</label>
+          <select id="sort-select">
+            <option value="popular">인기순</option>
+            <option value="recent">업로드순</option>
+          </select>
+        </div>
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+          <button id="search-button">검색</button>
+        </div>
+        <div class="video-list" id="video-list">
+          <div class="video-item" data-popularity="1234" data-upload-date="2023-10-01" data-title="동영상 제목 1">
+            <img src="/images/flat.png" alt="동영상 1" class="video-thumbnail">
+            <h3 class="video-title">동영상 제목 1</h3>
+            <p class="video-info">조회수: 1,234회 | 업로드: 1일 전</p>
+          </div>
+          <div class="video-item" data-popularity="567" data-upload-date="2023-09-28" data-title="동영상 제목 2">
+            <img src="/images/flat.png" alt="동영상 2" class="video-thumbnail">
+            <h3 class="video-title">동영상 제목 2</h3>
+            <p class="video-info">조회수: 567회 | 업로드: 3일 전</p>
+          </div>
+          <div class="video-item" data-popularity="890" data-upload-date="2023-09-25" data-title="동영상 제목 3">
+            <img src="/images/flat.png" alt="동영상 3" class="video-thumbnail">
+            <h3 class="video-title">동영상 제목 3</h3>
+            <p class="video-info">조회수: 890회 | 업로드: 1주 전</p>
+          </div>
+          <!-- 추가 동영상 항목 -->
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

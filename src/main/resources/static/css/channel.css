@@ -1,0 +1,164 @@
+.main {
+    width: 100%; /* 부모 요소의 너비 설정 */
+    display: flex; /* Flexbox를 사용하여 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+}
+
+.channel-container {
+  max-width: 100vw;
+  padding: 35px;
+}
+.channel-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.banner {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.profile {
+  position: absolute;
+  top: 150px; /* Adjust this value based on banner height */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border: 3px solid #fff; /* White border for profile image */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.channel-title {
+  font-size: 1.5em;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.subscriber-count {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.video-gallery {
+  margin-top: 60px; /* Space for profile image */
+}
+
+h2 {
+  margin: 20px 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.sort-options {
+  margin-bottom: 20px;
+}
+
+.sort-options label {
+  margin-right: 10px;
+}
+
+.sort-options select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#search-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff0000;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#search-button:hover {
+  background-color: #e60000;
+}
+
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.video-item {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 20px); /* 3 items per row with gap */
+  transition: transform 0.2s;
+}
+
+.video-item:hover {
+  transform: scale(1.02);
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+.video-title {
+  font-size: 1.1em;
+  margin: 10px;
+  color: #333;
+}
+
+.video-info {
+  margin: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .video-item {
+    width: calc(50% - 20px); /* 2 items per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .video-item {
+    width: 100%; /* 1 item per row */
+  }
+
+  .profile {
+    top: 120px; /* Adjust for smaller screens */
+  }
+
+  .banner {
+    height: 150px; /* Adjust banner height */
+  }
+}

@@ -15,4 +15,14 @@ public class videoStreamingController {
     public String mainTest() {
         return "main";
     }
+
+    @GetMapping("/mySubscriptions")
+    public String mySubscriptions() {
+        return "mySubscriptions";
+    }
+
+    @GetMapping("/channel")
+    public String channel() {
+        return "channel";
+    }
 }

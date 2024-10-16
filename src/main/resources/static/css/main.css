@@ -5,6 +5,7 @@ body {
 .container {
   display: flex;
 }
+
 footer {
   color: #696969;
   line-height: 15px;
