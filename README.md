@@ -15,3 +15,7 @@
 
 ![localhost_8080_index (4)](https://github.com/user-attachments/assets/ce8da631-1a8a-4b89-b1bc-5f839e77e79f)
 
+<br>
+<br>
+
+![localhost_8080_mySubscriptions](https://github.com/user-attachments/assets/de87d731-09b1-44b7-9b66-ba9114871cc4)
