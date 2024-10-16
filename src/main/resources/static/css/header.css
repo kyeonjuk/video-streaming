@@ -98,3 +98,7 @@ footer {
 .navbarBtn:hover {
     cursor: pointer;
 }
+
+.navbar__logo:hover {
+    cursor: pointer;
+}

@@ -106,3 +106,67 @@ commentUnlikeBtn.forEach(commentUnlikeList => {
         commentUnlikeList.textContent = (commentUnlikeList.textContent === 'thumb_down_off_alt') ? 'thumb_down' : 'thumb_down_off_alt'; // 아이콘 변경
     });
 });
+
+// 영상 소개글 더보기
+const toggleButton = document.getElementById('toggleButton');
+const descriptionContent = document.getElementById('descriptionContent');
+
+toggleButton.addEventListener('click', () => {
+    descriptionContent.classList.toggle('expanded');
+    toggleButton.textContent = descriptionContent.classList.contains('expanded') ? '간략히' : '더보기';
+});
+
+// 정렬기준
+const sortBtn = document.querySelector('.sort-header');
+const modal = document.getElementById("sortModal");
+modal.style.display = "none";
+
+sortBtn.addEventListener("click", () => {
+    const modal = document.getElementById("sortModal");
+    // 모달 표시 토글
+        if (modal.style.display === "block") {
+            modal.style.display = "none";
+        } else {
+            // 클릭한 요소의 위치 계산
+            const rect = event.target.getBoundingClientRect();
+            modal.style.display = "block";
+            modal.style.top = `${rect.bottom + window.scrollY}px`; // 클릭한 요소 바로 아래로 위치
+            modal.style.left = `${rect.left}px`; // 왼쪽 정렬
+        }
+});
+
+// 정렬 : 모달 외부 클릭 시 닫기
+window.addEventListener("click", (e) => {
+    const modal = document.getElementById("sortModal");
+    if (!e.target.closest('.sort-container')) {
+        modal.style.display = "none"; // 모달 숨기기
+    }
+});
+
+// 정렬 조건 선택시
+    // 리스트 항목 클릭 이벤트 추가
+    modal.querySelectorAll("li").forEach(item => {
+        item.addEventListener("click", function() {
+            const selectedText = item.textContent; // 선택한 항목 텍스트
+            selectedSort.textContent = selectedText; // 선택한 항목으로 텍스트 업데이트
+            modal.style.display = "none"; // 모달 닫기
+
+            /*// API 호출
+            fetch('/api/sort', { // API 엔드포인트를 지정
+                method: 'POST', // 요청 방식 (GET, POST 등)
+                headers: {
+                    'Content-Type': 'application/json' // 요청 헤더
+                },
+                body: JSON.stringify({ sortBy: selectedText }) // 선택한 정렬 기준 전송
+            })
+            .then(response => response.json()) // JSON 응답 처리
+            .then(data => {
+                console.log('Success:', data); // 성공적인 응답 처리
+                // 여기서 받은 데이터를 활용할 수 있습니다.
+            })
+            .catch((error) => {
+                console.error('Error:', error); // 에러 처리
+            });*/
+        });
+    });
+

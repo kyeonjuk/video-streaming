@@ -310,7 +310,7 @@ button, button:focus {
     width: 100%;
 }
 .Comment_sort_box {
-    width: 200px;
+    width: 240px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -533,5 +533,82 @@ button, button:focus {
 }
 
 .comment_thumb_down:hover {
+    cursor: pointer;
+}
+
+/* 영상 소개글 */
+.video-description {
+    background-color: #f0f0f0; /* 연한 회색 배경 */
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.video-text-content {
+    max-height: 55px; /* 기본적으로 보여줄 최대 높이 */
+    overflow: hidden;
+    transition: max-height 0.2s ease; /* 부드러운 애니메이션 */
+    margin : 5px;
+    text-overflow: ellipsis;    /* 넘치는 텍스트 숨김 */
+}
+
+.video-text-content > p {
+    margin : 2px;
+}
+
+.video-text-content.expanded {
+    max-height: none; /* 최대 높이 제한 제거 */
+    height: auto; /* 내용에 따라 높이 자동 조정 */
+}
+
+.toggle-btn {
+    background: none!important;
+    border: none;
+    color: black;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.video-meta {
+    display: flex; /* 가로 정렬 */
+    margin: 5px; /* 설명과 간격 */
+}
+
+.video-view-count,
+.video-date {
+    margin-right: 10px;
+    font-size: 14px; /* 글자 크기 조정 */
+    color: #666; /* 색상 조정 */
+}
+
+/* 정렬 기준 */
+.sort-modal {
+    display: none; /* 기본적으로 숨김 */
+    position: absolute; /* 절대 위치 설정 */
+    width: 150px; /* 모달 너비 */
+    border: 1px solid #ccc; /* 테두리 */
+    background-color: #fff; /* 배경색 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    z-index: 1000; /* 다른 요소 위에 표시 */
+    border-radius: 10px;
+}
+
+.sort-modal ul {
+    list-style-type: none; /* 기본 목록 스타일 제거 */
+    padding: 0; /* 패딩 제거 */
+    margin: 0; /* 마진 제거 */
+}
+
+.sort-modal li {
+    cursor: pointer; /* 커서 포인터로 변경 */
+    padding: 10px; /* 항목 여백 */
+}
+
+.sort-modal li:hover {
+    background-color: #e0e0e0; /* 마우스 오버 시 배경색 변경 */
+}
+.sort-header:hover {
     cursor: pointer;
 }

@@ -19,3 +19,11 @@ navbarBtn.addEventListener('click', () => {
     // .main 사이즈 변경
     mainSize.style.marginLeft = (sideContainer.style.width === "185px") ? "224px" : "70px";
 });
+
+// 우측 네비바, 로고 클릭시 페이지 이동
+document.querySelectorAll('.sidemenu-item li, .navbar__logo').forEach(item => {
+    item.addEventListener('click', function() {
+        const href = this.getAttribute('data-href');
+        window.location.href = href; // 해당 URL로 이동
+    });
+});
