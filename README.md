@@ -44,3 +44,24 @@
 <br>
 
 **[마이 페이지]**
+![localhost_8080_myPage](https://github.com/user-attachments/assets/ccca68c7-85c4-4fca-a68f-99b22bb26961)
+
+<br>
+<br>
+
+**[회원가입 페이지]**
+![localhost_8080_register](https://github.com/user-attachments/assets/839d7f74-3a2a-46d5-9dba-bde5eb37c335)
+
+
+<br>
+<br>
+
+**[로그인 페이지]**
+![localhost_8080_login](https://github.com/user-attachments/assets/520590e4-215d-4887-b153-6ef88a26e22b)
+
+<br>
+<br>
+
+**[내 정보 수정 페이지]**
+![localhost_8080_updateProfile](https://github.com/user-attachments/assets/720c7bde-da2d-4299-984d-36b7cbb21c85)
+
