@@ -16,6 +16,7 @@ public class VideoStreamingApplication {
 		System.out.println("http://localhost:8080/myPage");
 		System.out.println("http://localhost:8080/register");
 		System.out.println("http://localhost:8080/login");
+		System.out.println("http://localhost:8080/updateProfile");
 	}
 
 }

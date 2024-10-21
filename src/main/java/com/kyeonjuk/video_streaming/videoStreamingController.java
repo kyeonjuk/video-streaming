@@ -45,4 +45,9 @@ public class videoStreamingController {
     public String login() {
         return "login";
     }
+
+    @GetMapping("/updateProfile")
+    public String updateProfile() {
+        return "updateProfile";
+    }
 }

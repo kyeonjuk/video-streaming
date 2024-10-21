@@ -1,0 +1,93 @@
+.all {
+    margin-top: 30px;
+}
+
+.profile-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-title {
+    font-size: 1.7rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+label {
+    font-size: 1rem!important;
+    color: #555;
+    display: block;
+    font-weight: 600!important;
+    margin: 10px 0!important;
+}
+
+.profile-container input[type="text"],
+.profile-container input[type="email"],
+.profile-container input[type="file"],
+.profile-container input[type="password"] {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #FF0000;
+    outline: none;
+}
+
+.gender-select {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.save-button {
+    padding: 0.75rem;
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+    .save-button:hover {
+        background-color: #e60000;
+    }
+
+.cancel-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #FF0000;
+    text-decoration: none;
+}
+
+    .cancel-link:hover {
+        text-decoration: underline;
+    }
+
+.profile-container p {
+    margin-top: 20px;
+}
