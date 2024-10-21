@@ -38,3 +38,9 @@
 <br>
 
 **[채널 메인 페이지]**
+![localhost_8080_channel](https://github.com/user-attachments/assets/4053a8dd-b227-4677-b081-c354cb4cf027)
+
+<br>
+<br>
+
+**[마이 페이지]**
