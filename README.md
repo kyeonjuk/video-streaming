@@ -25,3 +25,16 @@
 **[내 구독 목록 페이지]**
 
 ![localhost_8080_mySubscriptions](https://github.com/user-attachments/assets/de87d731-09b1-44b7-9b66-ba9114871cc4)
+
+
+<br>
+<br>
+
+**[동영상 업로드 페이지]**
+![localhost_8080_uploadVideo](https://github.com/user-attachments/assets/4001aca9-a1f0-4f77-8e3a-6dfd800fdffc)
+![localhost_8080_uploadVideo (1)](https://github.com/user-attachments/assets/9a574e02-1ac7-4d9f-849b-5efea074c460)
+
+<br>
+<br>
+
+**[채널 메인 페이지]**
