@@ -13,6 +13,8 @@ public class VideoStreamingApplication {
 		System.out.println("http://localhost:8080/mySubscriptions");
 		System.out.println("http://localhost:8080/channel");
 		System.out.println("http://localhost:8080/uploadVideo");
+		System.out.println("http://localhost:8080/myPage");
+		System.out.println("http://localhost:8080/register");
 	}
 
 }

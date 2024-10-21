@@ -30,4 +30,14 @@ public class videoStreamingController {
     public String uploadVideo() {
         return "uploadVideo";
     }
+
+    @GetMapping("/myPage")
+    public String myPage() {
+        return "myPage";
+    }
+
+    @GetMapping("/register")
+    public String register() {
+        return "register";
+    }
 }

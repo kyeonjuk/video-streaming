@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>youtube</title>
+  <script src="https://kit.fontawesome.com/e3e7530894.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" th:href="@{/css/myPage.css}">
+  <link th:href="@{https://fonts.googleapis.com/icon?family=Material+Icons}"
+        rel="stylesheet">
+  <script src="/js/myPage.js" defer></script>
+</head>
+
+<body>
+<!-- header -->
+<div th:insert="~{../common/header :: headerFragment}"></div>
+<!-- // header -->
+
+<div class="main">
+  <div class="all">
+
+    <div class="mypage-container">
+      <h1 class="mypage-title">마이페이지</h1>
+
+      <div class="profile-section">
+
+        <!-- 프로필 사진 -->
+<!--        <img th:src="@{${user.profileImage}}" alt="프로필 사진" class="profile-img">-->
+        <img th:src="@{/images/flat.png}" alt="프로필 사진" class="profile-img">
+
+        <!-- 사용자 이름 -->
+<!--        <h2 class="username" th:text="${user.username}">사용자 이름</h2>-->
+        <h2 class="username">성 원진</h2>
+
+        <!-- 사용자 정보 -->
+<!--        <p class="user-info" th:text="'팔로워: ' + ${user.followers} + ' | 가입일: ' + ${user.joinDate}">팔로워: 0 | 가입일: 2023-01-01</p>-->
+        <p class="user-info">팔로워: 0 | 가입일: 2023-01-01</p>
+<!--        <p class="user-bio" th:text="${user.bio}">간단한 자기소개가 여기에 들어갑니다.</p>-->
+        <p class="user-bio">간단한 자기소개가 여기에 들어갑니다.</p>
+      </div>
+
+      <div class="action-buttons">
+        <div class="button-container">
+          <a th:href="@{/editProfile}" class="action-button">내 정보 수정</a>
+          <a th:href="@{/my-channel}" class="action-button">내 채널 보기</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

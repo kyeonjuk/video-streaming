@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>youtube</title>
+  <script src="https://kit.fontawesome.com/e3e7530894.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" th:href="@{/css/register.css}">
+  <link th:href="@{https://fonts.googleapis.com/icon?family=Material+Icons}"
+        rel="stylesheet">
+</head>
+
+<body>
+<!-- header -->
+<div th:insert="~{../common/header :: headerFragment}"></div>
+<!-- // header -->
+
+<div class="main">
+  <div class="all">
+
+    <div class="signup-container">
+      <h1 class="signup-title">회원 가입</h1>
+
+      <form th:action="@{/register}" method="post" class="signup-form">
+        <div class="form-group">
+          <label for="username">사용자 이름</label>
+          <input type="text" id="username" name="username" required placeholder="사용자 이름을 입력하세요">
+        </div>
+        <div class="form-group">
+          <label for="email">이메일</label>
+          <input type="email" id="email" name="email" required placeholder="이메일을 입력하세요">
+        </div>
+        <div class="form-group">
+          <label for="password">비밀번호</label>
+          <input type="password" id="password" name="password" required placeholder="비밀번호를 입력하세요">
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">비밀번호 확인</label>
+          <input type="password" id="confirm-password" name="confirmPassword" required placeholder="비밀번호를 다시 입력하세요">
+        </div>
+        <button type="submit" class="signup-button">가입하기</button>
+      </form>
+
+      <p class="login-redirect">이미 계정이 있으신가요? <a th:href="@{/login}" class="login-link">로그인</a></p>
+    </div>
+
+
+  </div>
+</div>
+
+</body>
+</html>
