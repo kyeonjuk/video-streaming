@@ -35,3 +35,15 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+// 구독 클릭시
+const subscribeBtn = document.querySelector('.subscribe');
+
+subscribeBtn.addEventListener('click', () => {
+  subscribeBtn.classList.toggle('clicked');
+  if (subscribeBtn.classList.contains('clicked')) {
+      subscribeBtn.textContent = 'Subscribed';
+    } else {
+      subscribeBtn.textContent = 'Subscribe';
+    }
+})

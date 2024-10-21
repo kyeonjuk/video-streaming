@@ -1,0 +1,107 @@
+.all {
+    margin-top: 30px;
+}
+
+.upload-container {
+    max-width: 50vw;
+    margin: auto;
+    background: white;
+    padding: 35px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+     display: flex;
+     flex-direction: column; /* 세로 방향으로 정렬 */
+     align-items: center;    /* 가로 중앙 정렬 */
+     justify-content: center; /* 세로 중앙 정렬 (높이에 여유가 있을 경우) */
+}
+
+.h1-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: 600!important;
+    margin: 10px!important;
+}
+
+.upload-container input[type="file"],
+.upload-container input[type="text"],
+textarea,
+select {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 90%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 93%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #cc0000;
+    }
+
+.thumbnail-preview {
+    display: none; /* 기본적으로 숨김 */
+    margin-top: 10px;
+    text-align: center;
+    width: 92%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+
+.thumbnail-preview img {
+    width: 100%; /* 너비를 100%로 설정하여 부모 요소에 맞추기 */
+    height: auto; /* 비율에 맞게 높이 조정 */
+    max-height: 100%; /* 최대 높이를 부모의 높이에 맞춤 */
+    object-fit: cover; /* 이미지를 잘라내지 않고 비율 유지 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    padding: 2px; /* 패딩 설정 */
+}
+
+.video-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.visibility-select {
+    display: flex;
+}
+
+#visibility {
+    width: auto;
+}
+
+form {
+    width: 95%;
+    margin-left: 2vw!important;
+}

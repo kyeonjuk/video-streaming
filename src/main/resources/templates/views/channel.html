@@ -12,32 +12,95 @@
 
 <div class="container">
   <main class="main">
-    <div class="channel-container">
-      <header class="channel-header">
-        <div class="banner">
-          <img src="/images/flat.png" alt="채널 배너" class="banner-image">
-        </div>
-        <div class="profile">
-          <img src="/images/flat.png" alt="프로필 이미지" class="profile-image">
-          <h1 class="channel-title">채널 이름</h1>
-          <p class="subscriber-count">구독자: 1,234명</p>
-        </div>
-      </header>
 
+    <div class="channel-container">
+
+      <!-- 프로필 -->
+<!--      <header class="channel-header">-->
+<!--        <div class="banner">-->
+<!--          <img src="/images/flat.png" alt="채널 배너" class="banner-image">-->
+<!--          &lt;!&ndash; thymeleaf 문 예시 &ndash;&gt;-->
+<!--&lt;!&ndash;          <img th:src="${channel.bannerImage}" alt="채널 배너" class="banner-image">&ndash;&gt;-->
+<!--        </div>-->
+<!--        <div class="profile">-->
+<!--          <img src="/images/flat.png" alt="프로필 이미지" class="profile-image">-->
+<!--          &lt;!&ndash; thymeleaf 문 예시 &ndash;&gt;-->
+<!--&lt;!&ndash;          <img th:src="${channel.profileImage}" alt="프로필 이미지" class="profile-image">&ndash;&gt;-->
+<!--          <h1 class="channel-title">채널 이름</h1>-->
+<!--          <p class="subscriber-count">구독자: 1,234명</p>-->
+<!--          &lt;!&ndash; thymeleaf 문 예시 &ndash;&gt;-->
+<!--&lt;!&ndash;          <h1 class="channel-title" th:text="${channel.name}">채널 이름</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;          <p class="subscriber-count" th:text="'구독자: ' + ${channel.subscriberCount} + '명'">구독자: 1,234명</p>&ndash;&gt;-->
+<!--        </div>-->
+<!--      </header>-->
+
+      <div class="profile-card">
+        <div class="profile-img">
+          <img src="https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGZhY2V8ZW58MHwyfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+        </div>
+        <div class="profile-infos">
+          <div class="profile-name">
+            <h2>Bradley Steve</h2>
+            <h4>@bradsteve</h4>
+          </div>
+          <p class="profile-text">
+            자기소개 입력창 profile-text 자기소개 입력창 profile-text 자기소개 입력창 profile-text
+          </p>
+          <ul class="profile-stats">
+            <li>
+<!--              <h3 th:text="${video.title}"></h3>-->
+              <h3>15K</h3>
+              <h4>조회수</h4>
+            </li>
+            <li>
+<!--              <h3 th:text="${video.title}"></h3>-->
+              <h3>82</h3>
+              <h4>동영상</h4>
+            </li>
+            <li>
+<!--              <h3 th:text="${video.title}"></h3>-->
+              <h3>1.3M</h3>
+              <h4>구독자</h4>
+            </li>
+          </ul>
+          <div class="profile-links">
+            <button class="subscribe">subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 동영상 부분 -->
       <div class="video-gallery">
         <h2>최신 동영상</h2>
-        <div class="sort-options">
-          <label for="sort-select">정렬 기준:</label>
-          <select id="sort-select">
-            <option value="popular">인기순</option>
-            <option value="recent">업로드순</option>
-          </select>
+        <div class="sort-and-search">
+          <div class="sort-options">
+            <label for="sort-select">정렬 기준:</label>
+            <select id="sort-select">
+              <option value="popular">인기순</option>
+              <option value="recent">업로드순</option>
+            </select>
+          </div>
+
+          <div class="search-bar">
+            <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+            <button id="search-button">
+              <i class="material-icons">search</i>
+            </button>
+          </div>
         </div>
-        <div class="search-bar">
-          <input type="text" id="search-input" placeholder="검색어를 입력하세요">
-          <button id="search-button">검색</button>
-        </div>
+
         <div class="video-list" id="video-list">
+          <!-- thymeleaf 동영상 list 반복문 -->
+<!--          <div class="video-item" th:each="video : ${videos}"-->
+<!--               th:data-popularity="${video.views}"-->
+<!--               th:data-upload-date="${video.uploadDate}"-->
+<!--               th:data-title="${video.title}">-->
+<!--            <img th:src="@{${video.thumbnail}}" alt="동영상 썸네일" class="video-thumbnail">-->
+<!--            <h3 class="video-title" th:text="${video.title}">동영상 제목</h3>-->
+<!--            <p class="video-info" th:text="'조회수: ' + ${#numbers.formatInteger(video.views, '#,###')} + '회 | 업로드: ' + ${video.uploadDate}">조회수: 1,234회 | 업로드: 1일 전</p>-->
+<!--          </div>-->
+
+
           <div class="video-item" data-popularity="1234" data-upload-date="2023-10-01" data-title="동영상 제목 1">
             <img src="/images/flat.png" alt="동영상 1" class="video-thumbnail">
             <h3 class="video-title">동영상 제목 1</h3>
@@ -53,9 +116,37 @@
             <h3 class="video-title">동영상 제목 3</h3>
             <p class="video-info">조회수: 890회 | 업로드: 1주 전</p>
           </div>
-          <!-- 추가 동영상 항목 -->
+          <div class="video-item" data-popularity="890" data-upload-date="2023-09-25" data-title="동영상 제목 4">
+            <img src="/images/flat.png" alt="동영상 4" class="video-thumbnail">
+            <h3 class="video-title">동영상 제목 4</h3>
+            <p class="video-info">조회수: 890회 | 업로드: 1주 전</p>
+          </div>
+          <div class="video-item" data-popularity="890" data-upload-date="2023-09-25" data-title="동영상 제목 5">
+            <img src="/images/flat.png" alt="동영상 5" class="video-thumbnail">
+            <h3 class="video-title">동영상 제목 5</h3>
+            <p class="video-info">조회수: 890회 | 업로드: 1주 전</p>
+          </div>
+          <div class="video-item" data-popularity="890" data-upload-date="2023-09-25" data-title="동영상 제목 6">
+            <img src="/images/flat.png" alt="동영상 6" class="video-thumbnail">
+            <h3 class="video-title">동영상 제목 6</h3>
+            <p class="video-info">조회수: 890회 | 업로드: 1주 전</p>
+          </div>
+          <div class="video-item" data-popularity="890" data-upload-date="2023-09-25" data-title="동영상 제목 7">
+            <img src="/images/flat.png" alt="동영상 7" class="video-thumbnail">
+            <h3 class="video-title">동영상 제목 7</h3>
+            <p class="video-info">조회수: 890회 | 업로드: 1주 전</p>
+          </div>
+          <div class="video-item" data-popularity="890" data-upload-date="2023-09-25" data-title="동영상 제목 8">
+            <img src="/images/flat.png" alt="동영상 8" class="video-thumbnail">
+            <h3 class="video-title">동영상 제목 8</h3>
+            <p class="video-info">조회수: 890회 | 업로드: 1주 전</p>
+          </div>
         </div>
       </div>
+      <!-- // 동영상 부분 -->
+
+
+
     </div>
   </main>
 </div>

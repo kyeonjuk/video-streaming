@@ -25,4 +25,9 @@ public class videoStreamingController {
     public String channel() {
         return "channel";
     }
+
+    @GetMapping("/uploadVideo")
+    public String uploadVideo() {
+        return "uploadVideo";
+    }
 }

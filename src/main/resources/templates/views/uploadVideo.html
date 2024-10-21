@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>youtube</title>
+  <script src="https://kit.fontawesome.com/e3e7530894.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" th:href="@{/css/uploadvideo.css}">
+  <link th:href="@{https://fonts.googleapis.com/icon?family=Material+Icons}"
+        rel="stylesheet">
+  <script src="/js/uploadVideo.js" defer></script>
+</head>
+
+<body>
+<!-- header -->
+<div th:insert="~{../common/header :: headerFragment}"></div>
+<!-- // header -->
+
+<div class="main">
+  <div class="all">
+    <div class="upload-container">
+      <h1 class="h1-title">동영상 업로드</h1>
+      <form action="#" th:action="@{/upload}" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="videoFile">동영상 파일 선택</label>
+          <input type="file" id="videoFile" name="videoFile" accept="video/*" required>
+        </div>
+        <div class="form-group">
+          <label for="thumbnail">썸네일 이미지 선택</label>
+          <input type="file" id="thumbnail" name="thumbnail" accept="image/*" required>
+          <div class="thumbnail-preview" id="thumbnailPreview"></div>
+        </div>
+        <div class="form-group">
+          <label for="title">제목</label>
+          <input type="text" id="title" name="title" required placeholder="제목을 입력하세요">
+        </div>
+        <div class="form-group">
+          <label for="description">영상 내용</label>
+          <textarea id="description" name="description" rows="4" required placeholder="영상 내용을 입력하세요"></textarea>
+        </div>
+        <div class="form-group visibility-select">
+          <label for="visibility">공개 설정</label>
+          <select id="visibility" name="visibility">
+            <option value="public">공개</option>
+            <option value="unlisted">비공개</option>
+          </select>
+        </div>
+        <button type="submit">업로드</button>
+      </form>
+
+      <div class="video-container" th:if="${videoUrl != null}">
+        <h2>업로드된 동영상</h2>
+        <video controls th:src="@{${videoUrl}}"></video>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
