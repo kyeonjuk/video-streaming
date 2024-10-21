@@ -32,7 +32,7 @@ button {
 }
 
 .channel-container {
-  max-width: 70vw;
+  width: 70vw;
   padding: 35px;
 }
 .channel-header {
@@ -67,6 +67,7 @@ h2 {
   margin-right: 10px;
   font-size: 1em;
   color: #333;
+  align-content: center;
 }
 
 .sort-options select {
@@ -205,6 +206,7 @@ ul {
   transform-style: preserve-3d;
   overflow: hidden;
   margin: auto;
+  width: 95%;
 }
 .profile-card::before,
 .profile-card::after {
@@ -233,6 +235,9 @@ ul {
   width: 11rem;
   min-width: 80px;
   box-shadow: 0 0 0 5px #FFF;
+  height: 11rem; /* 이미지 높이도 설정하여 원형 유지 */
+  border-radius: 50%; /* 원형으로 만들기 */
+  object-fit: cover; /* 이미지가 영역에 맞게 잘림 */
 }
 
 .profile-infos {
@@ -245,7 +250,8 @@ ul {
   display: inline-block;
 }
 .profile-name h2 {
-  font-size: 1.3rem;
+  font-weight: 600;
+  font-size: 1.7rem;
 }
 .profile-name h4 {
   font-size: .8rem;
