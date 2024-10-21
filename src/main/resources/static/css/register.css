@@ -79,3 +79,10 @@ input:focus {
 .login-link:hover {
     text-decoration: underline; /* 호버 시 밑줄 추가 */
 }
+
+#error-message, #success-message{
+    color: red; /* 에러 메시지 색상 */
+    font-size: 0.9rem; /* 메시지 크기 조정 */
+    margin-top: 0.5rem; /* 위쪽 여백 추가 */
+    margin-left: 10px;
+}
